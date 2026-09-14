@@ -49,6 +49,22 @@
     <div class="container py-4">
         @yield('content')
     </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Summernote Lite CSS & JS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#content').summernote({
+                placeholder: 'เขียนเนื้อหาบทความที่นี่...',
+                tabsize: 2,
+                height: 250
+            });
+        });
+    </script>
 </body>
 
 </html>
